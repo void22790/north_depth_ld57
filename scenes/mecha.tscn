@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch6pmrwg1udrk"]
+
+[ext_resource type="Script" uid="uid://bqicsybdra5r3" path="res://scripts/mecha.gd" id="1_yiirs"]
+
+[node name="Mecha" type="Node"]
+script = ExtResource("1_yiirs")
+
+[node name="Timer" type="Timer" parent="."]

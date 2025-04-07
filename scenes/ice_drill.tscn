@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bojd1iero0wh5"]
+
+[ext_resource type="Script" uid="uid://5mljq4sd14jt" path="res://scripts/ice_drill.gd" id="1_2a0tj"]
+
+[node name="IceDrill" type="Node"]
+script = ExtResource("1_2a0tj")
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn83yjck8y71k"]
+
+[ext_resource type="Shader" uid="uid://gsj8b08rh7v0" path="res://shaders/break_overlay.gdshader" id="1_1wnpx"]
+[ext_resource type="Texture2D" uid="uid://ldp2ncunaykf" path="res://graphics/tiles/block_break.png" id="1_3gx5g"]
+[ext_resource type="Script" uid="uid://cqitqjf6ne3qj" path="res://scripts/break_overlay.gd" id="2_ykgxy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tk5ie"]
+shader = ExtResource("1_1wnpx")
+
+[node name="BreakOverlay" type="Sprite2D"]
+material = SubResource("ShaderMaterial_tk5ie")
+texture = ExtResource("1_3gx5g")
+hframes = 9
+script = ExtResource("2_ykgxy")

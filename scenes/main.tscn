@@ -1,0 +1,1128 @@
+[gd_scene load_steps=45 format=3 uid="uid://2hlhcbuquq86"]
+
+[ext_resource type="Texture2D" uid="uid://gwwqy7m2u5bw" path="res://graphics/tiles/ore_tileset.png" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://c5twl255lps12" path="res://scripts/main.gd" id="1_sugp2"]
+[ext_resource type="Texture2D" uid="uid://c7vv33ref781w" path="res://graphics/tiles/ice_tileset.png" id="2_0wfyh"]
+[ext_resource type="AudioStream" uid="uid://ch5hak1ga5543" path="res://sounds/stone.ogg" id="4_5q0nq"]
+[ext_resource type="AudioStream" uid="uid://clq7gmkgv2iim" path="res://sounds/button.ogg" id="5_j8jky"]
+[ext_resource type="Script" uid="uid://bv661l4dtppga" path="res://scripts/music_controller.gd" id="5_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://bdkvlodjwdbw3" path="res://sounds/switch.ogg" id="6_kmb1v"]
+[ext_resource type="Texture2D" uid="uid://ctd68j3dmrqxx" path="res://graphics/gui/gui_frame.png" id="6_tefeu"]
+[ext_resource type="Texture2D" uid="uid://d01mnif373frw" path="res://graphics/gui/depth_scr.png" id="7_choun"]
+[ext_resource type="Texture2D" uid="uid://cym8ji5xp8tcu" path="res://graphics/gui/b_down.png" id="8_ya4ey"]
+[ext_resource type="Texture2D" uid="uid://2ejn7qx2pm75" path="res://graphics/gui/b_up.png" id="9_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://r5a3r3bf82px" path="res://graphics/gui/switch.png" id="10_trceg"]
+[ext_resource type="Texture2D" uid="uid://cce70q0kr4k0c" path="res://graphics/main_scr/main_bg.png" id="11_eb6dy"]
+[ext_resource type="Theme" uid="uid://b3kix8d3j7ubc" path="res://themes/button_elevator.tres" id="12_2f3dj"]
+[ext_resource type="Texture2D" uid="uid://dcpxx3lt203vg" path="res://graphics/main_scr/foreground.png" id="13_trceg"]
+[ext_resource type="Theme" uid="uid://dexhareculb6" path="res://themes/button_geo.tres" id="13_yq6so"]
+[ext_resource type="Texture2D" uid="uid://dg0nw7kb1py5s" path="res://graphics/main_scr/smoke.png" id="14_0ld40"]
+[ext_resource type="Theme" uid="uid://dfqf5xv3dfcou" path="res://themes/button_mb.tres" id="15_2f3dj"]
+[ext_resource type="Theme" uid="uid://dj0k3l3f325y" path="res://themes/button_barracks.tres" id="17_2f3dj"]
+[ext_resource type="Theme" uid="uid://72auhwry7snn" path="res://themes/button_chp.tres" id="18_fv21b"]
+[ext_resource type="Theme" uid="uid://bgjw6vocambgg" path="res://themes/button_ri.tres" id="19_tel4y"]
+[ext_resource type="Theme" uid="uid://3h0l55cbjr8h" path="res://themes/button_down.tres" id="20_gqmmt"]
+[ext_resource type="Theme" uid="uid://dcodqlteum164" path="res://themes/button_up.tres" id="21_yc10j"]
+[ext_resource type="Theme" uid="uid://ctu57f1ceni16" path="res://themes/switch.tres" id="23_pm3ni"]
+[ext_resource type="FontFile" uid="uid://ckhk4084wijm0" path="res://graphics/gui/bigdigits.png" id="23_y6deb"]
+[ext_resource type="FontFile" uid="uid://cppno1ckhrmry" path="res://graphics/gui/smalldigits.png" id="24_og1vs"]
+[ext_resource type="Texture2D" uid="uid://ch2lncp41fyjg" path="res://graphics/buildings_gui/menu_bg.png" id="25_og1vs"]
+[ext_resource type="Texture2D" uid="uid://chak08n1fa1l6" path="res://graphics/buildings_gui/frame_main_building.png" id="26_2f3dj"]
+[ext_resource type="Theme" uid="uid://w4dgidxcep5g" path="res://themes/button_buy.tres" id="27_yq6so"]
+[ext_resource type="Theme" uid="uid://bqy4fn3xlrxx3" path="res://themes/button_back.tres" id="28_fv21b"]
+[ext_resource type="Texture2D" uid="uid://b1r8ro4ngja1o" path="res://graphics/buildings_gui/frame_barracks.png" id="29_yq6so"]
+[ext_resource type="Texture2D" uid="uid://dussqfd7ogk7p" path="res://graphics/buildings_gui/frame_geo.png" id="30_fv21b"]
+[ext_resource type="Texture2D" uid="uid://fvp2dgmqbnj7" path="res://graphics/buildings_gui/frame_chp.png" id="31_tel4y"]
+[ext_resource type="Texture2D" uid="uid://dsqloewync5mi" path="res://graphics/buildings_gui/frame_ri.png" id="32_qkpxi"]
+[ext_resource type="Texture2D" uid="uid://0kk6kvhl6gjn" path="res://graphics/buildings_gui/frame_elevator.png" id="33_5q0nq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
+texture = ExtResource("1_o5qli")
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_tbgi4"]
+sources/0 = SubResource("TileSetAtlasSource_jyhfs")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
+texture = ExtResource("1_o5qli")
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sugp2"]
+sources/0 = SubResource("TileSetAtlasSource_0wfyh")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sugp2"]
+texture = ExtResource("2_0wfyh")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/bottom_side = 0
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/terrains_peering_bit/right_side = 0
+1:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/terrains_peering_bit/right_side = 0
+2:0/0/terrains_peering_bit/bottom_side = 0
+2:0/0/terrains_peering_bit/left_side = 0
+3:0/0 = 0
+3:0/0/terrain_set = 0
+3:0/0/terrain = 0
+3:0/0/terrains_peering_bit/bottom_side = 0
+3:0/0/terrains_peering_bit/left_side = 0
+4:0/0 = 0
+4:0/0/terrain_set = 0
+4:0/0/terrain = 0
+4:0/0/terrains_peering_bit/right_side = 0
+4:0/0/terrains_peering_bit/bottom_side = 0
+4:0/0/terrains_peering_bit/left_side = 0
+4:0/0/terrains_peering_bit/top_left_corner = 0
+4:0/0/terrains_peering_bit/top_side = 0
+5:0/0 = 0
+5:0/0/terrain_set = 0
+5:0/0/terrain = 0
+5:0/0/terrains_peering_bit/right_side = 0
+5:0/0/terrains_peering_bit/bottom_right_corner = 0
+5:0/0/terrains_peering_bit/bottom_side = 0
+5:0/0/terrains_peering_bit/left_side = 0
+6:0/0 = 0
+6:0/0/terrain_set = 0
+6:0/0/terrain = 0
+6:0/0/terrains_peering_bit/right_side = 0
+6:0/0/terrains_peering_bit/bottom_side = 0
+6:0/0/terrains_peering_bit/bottom_left_corner = 0
+6:0/0/terrains_peering_bit/left_side = 0
+7:0/0 = 0
+7:0/0/terrain_set = 0
+7:0/0/terrain = 0
+7:0/0/terrains_peering_bit/right_side = 0
+7:0/0/terrains_peering_bit/bottom_side = 0
+7:0/0/terrains_peering_bit/left_side = 0
+7:0/0/terrains_peering_bit/top_side = 0
+7:0/0/terrains_peering_bit/top_right_corner = 0
+8:0/0 = 0
+8:0/0/terrain_set = 0
+8:0/0/terrain = 0
+8:0/0/terrains_peering_bit/right_side = 0
+8:0/0/terrains_peering_bit/bottom_right_corner = 0
+8:0/0/terrains_peering_bit/bottom_side = 0
+9:0/0 = 0
+9:0/0/terrain_set = 0
+9:0/0/terrain = 0
+9:0/0/terrains_peering_bit/right_side = 0
+9:0/0/terrains_peering_bit/bottom_right_corner = 0
+9:0/0/terrains_peering_bit/bottom_side = 0
+9:0/0/terrains_peering_bit/bottom_left_corner = 0
+9:0/0/terrains_peering_bit/left_side = 0
+9:0/0/terrains_peering_bit/top_side = 0
+10:0/0 = 0
+10:0/0/terrain_set = 0
+10:0/0/terrain = 0
+10:0/0/terrains_peering_bit/right_side = 0
+10:0/0/terrains_peering_bit/bottom_right_corner = 0
+10:0/0/terrains_peering_bit/bottom_side = 0
+10:0/0/terrains_peering_bit/bottom_left_corner = 0
+10:0/0/terrains_peering_bit/left_side = 0
+11:0/0 = 0
+11:0/0/terrain_set = 0
+11:0/0/terrain = 0
+11:0/0/terrains_peering_bit/bottom_side = 0
+11:0/0/terrains_peering_bit/bottom_left_corner = 0
+11:0/0/terrains_peering_bit/left_side = 0
+12:0/0 = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/terrains_peering_bit/bottom_side = 0
+0:1/0/terrains_peering_bit/top_side = 0
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrain = 0
+1:1/0/terrains_peering_bit/right_side = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/top_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrain = 0
+2:1/0/terrains_peering_bit/right_side = 0
+2:1/0/terrains_peering_bit/bottom_side = 0
+2:1/0/terrains_peering_bit/left_side = 0
+2:1/0/terrains_peering_bit/top_side = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/left_side = 0
+3:1/0/terrains_peering_bit/top_side = 0
+4:1/0 = 0
+4:1/0/terrain_set = 0
+4:1/0/terrain = 0
+4:1/0/terrains_peering_bit/right_side = 0
+4:1/0/terrains_peering_bit/bottom_right_corner = 0
+4:1/0/terrains_peering_bit/bottom_side = 0
+4:1/0/terrains_peering_bit/top_side = 0
+5:1/0 = 0
+5:1/0/terrain_set = 0
+5:1/0/terrain = 0
+5:1/0/terrains_peering_bit/right_side = 0
+5:1/0/terrains_peering_bit/bottom_right_corner = 0
+5:1/0/terrains_peering_bit/bottom_side = 0
+5:1/0/terrains_peering_bit/bottom_left_corner = 0
+5:1/0/terrains_peering_bit/left_side = 0
+5:1/0/terrains_peering_bit/top_side = 0
+5:1/0/terrains_peering_bit/top_right_corner = 0
+6:1/0 = 0
+6:1/0/terrain_set = 0
+6:1/0/terrain = 0
+6:1/0/terrains_peering_bit/right_side = 0
+6:1/0/terrains_peering_bit/bottom_right_corner = 0
+6:1/0/terrains_peering_bit/bottom_side = 0
+6:1/0/terrains_peering_bit/bottom_left_corner = 0
+6:1/0/terrains_peering_bit/left_side = 0
+6:1/0/terrains_peering_bit/top_left_corner = 0
+6:1/0/terrains_peering_bit/top_side = 0
+7:1/0 = 0
+7:1/0/terrain_set = 0
+7:1/0/terrain = 0
+7:1/0/terrains_peering_bit/bottom_side = 0
+7:1/0/terrains_peering_bit/bottom_left_corner = 0
+7:1/0/terrains_peering_bit/left_side = 0
+7:1/0/terrains_peering_bit/top_side = 0
+8:1/0 = 0
+8:1/0/terrain_set = 0
+8:1/0/terrain = 0
+8:1/0/terrains_peering_bit/right_side = 0
+8:1/0/terrains_peering_bit/bottom_right_corner = 0
+8:1/0/terrains_peering_bit/bottom_side = 0
+8:1/0/terrains_peering_bit/top_side = 0
+8:1/0/terrains_peering_bit/top_right_corner = 0
+9:1/0 = 0
+9:1/0/terrain_set = 0
+9:1/0/terrain = 0
+9:1/0/terrains_peering_bit/right_side = 0
+9:1/0/terrains_peering_bit/bottom_side = 0
+9:1/0/terrains_peering_bit/bottom_left_corner = 0
+9:1/0/terrains_peering_bit/left_side = 0
+9:1/0/terrains_peering_bit/top_side = 0
+9:1/0/terrains_peering_bit/top_right_corner = 0
+10:1/0 = 0
+11:1/0 = 0
+11:1/0/terrain_set = 0
+11:1/0/terrain = 0
+11:1/0/terrains_peering_bit/right_side = 0
+11:1/0/terrains_peering_bit/bottom_side = 0
+11:1/0/terrains_peering_bit/bottom_left_corner = 0
+11:1/0/terrains_peering_bit/left_side = 0
+11:1/0/terrains_peering_bit/top_left_corner = 0
+11:1/0/terrains_peering_bit/top_side = 0
+12:1/0 = 0
+0:2/0 = 0
+0:2/0/terrain_set = 0
+0:2/0/terrain = 0
+0:2/0/terrains_peering_bit/top_side = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/top_side = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/right_side = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_side = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/left_side = 0
+3:2/0/terrains_peering_bit/top_side = 0
+4:2/0 = 0
+4:2/0/terrain_set = 0
+4:2/0/terrain = 0
+4:2/0/terrains_peering_bit/right_side = 0
+4:2/0/terrains_peering_bit/bottom_side = 0
+4:2/0/terrains_peering_bit/top_side = 0
+4:2/0/terrains_peering_bit/top_right_corner = 0
+5:2/0 = 0
+5:2/0/terrain_set = 0
+5:2/0/terrain = 0
+5:2/0/terrains_peering_bit/right_side = 0
+5:2/0/terrains_peering_bit/bottom_right_corner = 0
+5:2/0/terrains_peering_bit/bottom_side = 0
+5:2/0/terrains_peering_bit/left_side = 0
+5:2/0/terrains_peering_bit/top_left_corner = 0
+5:2/0/terrains_peering_bit/top_side = 0
+5:2/0/terrains_peering_bit/top_right_corner = 0
+6:2/0 = 0
+6:2/0/terrain_set = 0
+6:2/0/terrain = 0
+6:2/0/terrains_peering_bit/right_side = 0
+6:2/0/terrains_peering_bit/bottom_side = 0
+6:2/0/terrains_peering_bit/bottom_left_corner = 0
+6:2/0/terrains_peering_bit/left_side = 0
+6:2/0/terrains_peering_bit/top_left_corner = 0
+6:2/0/terrains_peering_bit/top_side = 0
+6:2/0/terrains_peering_bit/top_right_corner = 0
+7:2/0 = 0
+7:2/0/terrain_set = 0
+7:2/0/terrain = 0
+7:2/0/terrains_peering_bit/bottom_side = 0
+7:2/0/terrains_peering_bit/left_side = 0
+7:2/0/terrains_peering_bit/top_left_corner = 0
+7:2/0/terrains_peering_bit/top_side = 0
+8:2/0 = 0
+8:2/0/terrain_set = 0
+8:2/0/terrain = 0
+8:2/0/terrains_peering_bit/right_side = 0
+8:2/0/terrains_peering_bit/bottom_right_corner = 0
+8:2/0/terrains_peering_bit/bottom_side = 0
+8:2/0/terrains_peering_bit/left_side = 0
+8:2/0/terrains_peering_bit/top_side = 0
+8:2/0/terrains_peering_bit/top_right_corner = 0
+9:2/0 = 0
+9:2/0/terrain_set = 0
+9:2/0/terrain = 0
+9:2/0/terrains_peering_bit/right_side = 0
+9:2/0/terrains_peering_bit/bottom_right_corner = 0
+9:2/0/terrains_peering_bit/bottom_side = 0
+9:2/0/terrains_peering_bit/bottom_left_corner = 0
+9:2/0/terrains_peering_bit/left_side = 0
+9:2/0/terrains_peering_bit/top_left_corner = 0
+9:2/0/terrains_peering_bit/top_side = 0
+9:2/0/terrains_peering_bit/top_right_corner = 0
+10:2/0 = 0
+10:2/0/terrain_set = 0
+10:2/0/terrain = 0
+10:2/0/terrains_peering_bit/right_side = 0
+10:2/0/terrains_peering_bit/bottom_right_corner = 0
+10:2/0/terrains_peering_bit/bottom_side = 0
+10:2/0/terrains_peering_bit/left_side = 0
+10:2/0/terrains_peering_bit/top_left_corner = 0
+10:2/0/terrains_peering_bit/top_side = 0
+11:2/0 = 0
+11:2/0/terrain_set = 0
+11:2/0/terrain = 0
+11:2/0/terrains_peering_bit/bottom_side = 0
+11:2/0/terrains_peering_bit/bottom_left_corner = 0
+11:2/0/terrains_peering_bit/left_side = 0
+11:2/0/terrains_peering_bit/top_left_corner = 0
+11:2/0/terrains_peering_bit/top_side = 0
+12:2/0 = 0
+0:3/0 = 0
+0:3/0/terrain_set = 0
+0:3/0/terrain = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/right_side = 0
+2:3/0/terrains_peering_bit/left_side = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/terrains_peering_bit/left_side = 0
+4:3/0 = 0
+4:3/0/terrain_set = 0
+4:3/0/terrain = 0
+4:3/0/terrains_peering_bit/right_side = 0
+4:3/0/terrains_peering_bit/bottom_side = 0
+4:3/0/terrains_peering_bit/bottom_left_corner = 0
+4:3/0/terrains_peering_bit/left_side = 0
+4:3/0/terrains_peering_bit/top_side = 0
+5:3/0 = 0
+5:3/0/terrain_set = 0
+5:3/0/terrain = 0
+5:3/0/terrains_peering_bit/right_side = 0
+5:3/0/terrains_peering_bit/left_side = 0
+5:3/0/terrains_peering_bit/top_side = 0
+5:3/0/terrains_peering_bit/top_right_corner = 0
+6:3/0 = 0
+6:3/0/terrain_set = 0
+6:3/0/terrain = 0
+6:3/0/terrains_peering_bit/right_side = 0
+6:3/0/terrains_peering_bit/left_side = 0
+6:3/0/terrains_peering_bit/top_left_corner = 0
+6:3/0/terrains_peering_bit/top_side = 0
+7:3/0 = 0
+7:3/0/terrain_set = 0
+7:3/0/terrain = 0
+7:3/0/terrains_peering_bit/right_side = 0
+7:3/0/terrains_peering_bit/bottom_right_corner = 0
+7:3/0/terrains_peering_bit/bottom_side = 0
+7:3/0/terrains_peering_bit/left_side = 0
+7:3/0/terrains_peering_bit/top_side = 0
+8:3/0 = 0
+8:3/0/terrain_set = 0
+8:3/0/terrain = 0
+8:3/0/terrains_peering_bit/right_side = 0
+8:3/0/terrains_peering_bit/top_side = 0
+8:3/0/terrains_peering_bit/top_right_corner = 0
+9:3/0 = 0
+9:3/0/terrain_set = 0
+9:3/0/terrain = 0
+9:3/0/terrains_peering_bit/right_side = 0
+9:3/0/terrains_peering_bit/left_side = 0
+9:3/0/terrains_peering_bit/top_left_corner = 0
+9:3/0/terrains_peering_bit/top_side = 0
+9:3/0/terrains_peering_bit/top_right_corner = 0
+10:3/0 = 0
+10:3/0/terrain_set = 0
+10:3/0/terrain = 0
+10:3/0/terrains_peering_bit/right_side = 0
+10:3/0/terrains_peering_bit/bottom_side = 0
+10:3/0/terrains_peering_bit/left_side = 0
+10:3/0/terrains_peering_bit/top_left_corner = 0
+10:3/0/terrains_peering_bit/top_side = 0
+10:3/0/terrains_peering_bit/top_right_corner = 0
+11:3/0 = 0
+11:3/0/terrain_set = 0
+11:3/0/terrain = 0
+11:3/0/terrains_peering_bit/left_side = 0
+11:3/0/terrains_peering_bit/top_left_corner = 0
+11:3/0/terrains_peering_bit/top_side = 0
+12:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_jyhfs"]
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Terrain 0"
+terrain_set_0/terrain_0/color = Color(0.707082, 0, 0.328691, 1)
+sources/0 = SubResource("TileSetAtlasSource_sugp2")
+
+[sub_resource type="Gradient" id="Gradient_gqmmt"]
+colors = PackedColorArray(0.541176, 0.784314, 0.980392, 1, 1, 1, 1, 0)
+
+[sub_resource type="Theme" id="Theme_2wyq8"]
+default_font = ExtResource("23_y6deb")
+default_font_size = 5
+
+[sub_resource type="Theme" id="Theme_vxglm"]
+default_font = ExtResource("24_og1vs")
+default_font_size = 5
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_sugp2")
+
+[node name="BgLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_tbgi4")
+
+[node name="OreLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_sugp2")
+
+[node name="IceLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_jyhfs")
+
+[node name="MainScrParticles" type="Node2D" parent="."]
+
+[node name="SnowParticlesBack" type="CPUParticles2D" parent="MainScrParticles"]
+z_index = -2
+position = Vector2(206, 17)
+amount = 200
+lifetime = 10.0
+preprocess = 30.0
+emission_shape = 3
+emission_rect_extents = Vector2(250, 1)
+gravity = Vector2(20, 20)
+orbit_velocity_max = 0.05
+scale_amount_max = 2.0
+color = Color(0.921569, 0.694118, 1, 1)
+
+[node name="SnowParticlesFront" type="CPUParticles2D" parent="MainScrParticles"]
+z_index = -1
+position = Vector2(206, 17)
+amount = 100
+lifetime = 10.0
+preprocess = 30.0
+emission_shape = 3
+emission_rect_extents = Vector2(250, 1)
+gravity = Vector2(20, 20)
+orbit_velocity_max = 0.05
+scale_amount_max = 2.0
+color = Color(0.466667, 0.721569, 0.847059, 1)
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="IceSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("4_5q0nq")
+
+[node name="ButtonSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("5_j8jky")
+
+[node name="SwitchSound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("6_kmb1v")
+
+[node name="MusicController" type="Node" parent="."]
+script = ExtResource("5_tbgi4")
+
+[node name="Timer" type="Timer" parent="MusicController"]
+
+[node name="Music" type="AudioStreamPlayer2D" parent="MusicController"]
+
+[node name="GUI" type="Node2D" parent="."]
+z_index = 2
+position = Vector2(0, -1)
+
+[node name="FrameGUI" type="Sprite2D" parent="GUI"]
+position = Vector2(240, 136)
+texture = ExtResource("6_tefeu")
+
+[node name="DepthScr" type="Sprite2D" parent="GUI"]
+position = Vector2(16, 225)
+texture = ExtResource("7_choun")
+centered = false
+
+[node name="ButtonDown" type="Sprite2D" parent="GUI"]
+visible = false
+position = Vector2(105, 223)
+texture = ExtResource("8_ya4ey")
+centered = false
+hframes = 2
+
+[node name="ButtonUp" type="Sprite2D" parent="GUI"]
+visible = false
+position = Vector2(128, 223)
+texture = ExtResource("9_eb6dy")
+centered = false
+hframes = 2
+
+[node name="SwitchMusic" type="Sprite2D" parent="GUI"]
+visible = false
+position = Vector2(432, 218)
+texture = ExtResource("10_trceg")
+centered = false
+hframes = 2
+
+[node name="SwitchMusic2" type="Sprite2D" parent="GUI"]
+visible = false
+position = Vector2(432, 242)
+texture = ExtResource("10_trceg")
+centered = false
+hframes = 2
+
+[node name="MainScreen" type="Node2D" parent="."]
+z_index = -1
+
+[node name="MainBackground" type="Sprite2D" parent="MainScreen"]
+z_index = -2
+position = Vector2(160, 16)
+texture = ExtResource("11_eb6dy")
+centered = false
+
+[node name="ElevatorButton" type="Button" parent="MainScreen"]
+visible = false
+z_index = -1
+custom_minimum_size = Vector2(32, 83)
+offset_left = 260.0
+offset_top = 114.0
+offset_right = 260.0
+offset_bottom = 114.0
+theme = ExtResource("12_2f3dj")
+
+[node name="GeoCenterButton" type="Button" parent="MainScreen"]
+visible = false
+z_index = -1
+custom_minimum_size = Vector2(57, 75)
+offset_left = 339.0
+offset_top = 122.0
+offset_right = 339.0
+offset_bottom = 122.0
+theme = ExtResource("13_yq6so")
+
+[node name="Smoke3" type="CPUParticles2D" parent="MainScreen/GeoCenterButton"]
+position = Vector2(14, 4)
+amount = 16
+texture = ExtResource("14_0ld40")
+preprocess = 10.0
+speed_scale = 0.2
+gravity = Vector2(25, -200)
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_gqmmt")
+
+[node name="MainBuildingButton" type="Button" parent="MainScreen"]
+z_index = -1
+offset_left = 284.0
+offset_top = 113.0
+offset_right = 339.0
+offset_bottom = 197.0
+theme = ExtResource("15_2f3dj")
+
+[node name="MainForeground" type="Sprite2D" parent="MainScreen"]
+position = Vector2(160, 197)
+texture = ExtResource("13_trceg")
+centered = false
+
+[node name="BarracksButton" type="Button" parent="MainScreen"]
+visible = false
+z_index = -1
+offset_left = 363.0
+offset_top = 172.0
+offset_right = 453.0
+offset_bottom = 198.0
+theme = ExtResource("17_2f3dj")
+
+[node name="CHPButton" type="Button" parent="MainScreen"]
+visible = false
+z_index = -1
+custom_minimum_size = Vector2(62, 100)
+offset_left = 171.0
+offset_top = 97.0
+offset_right = 233.0
+offset_bottom = 197.0
+theme = ExtResource("18_fv21b")
+
+[node name="Smoke" type="CPUParticles2D" parent="MainScreen/CHPButton"]
+position = Vector2(40, -2)
+amount = 16
+texture = ExtResource("14_0ld40")
+preprocess = 10.0
+speed_scale = 0.2
+gravity = Vector2(25, -200)
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_gqmmt")
+
+[node name="Smoke2" type="CPUParticles2D" parent="MainScreen/CHPButton"]
+position = Vector2(28, 19)
+amount = 16
+texture = ExtResource("14_0ld40")
+preprocess = 10.0
+speed_scale = 0.2
+gravity = Vector2(25, -200)
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_gqmmt")
+
+[node name="RIButton" type="Button" parent="MainScreen"]
+visible = false
+z_index = -1
+custom_minimum_size = Vector2(87, 37)
+offset_left = 181.0
+offset_top = 160.0
+offset_right = 181.0
+offset_bottom = 160.0
+theme = ExtResource("19_tel4y")
+
+[node name="ControlMainScreen" type="Control" parent="."]
+z_index = 2
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ButtonDown" type="Button" parent="ControlMainScreen"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 222.0
+offset_right = 120.0
+offset_bottom = 258.0
+theme = ExtResource("20_gqmmt")
+
+[node name="ButtonUp" type="Button" parent="ControlMainScreen"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 222.0
+offset_right = 143.0
+offset_bottom = 258.0
+theme = ExtResource("21_yc10j")
+
+[node name="CheckMusic" type="CheckButton" parent="ControlMainScreen"]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 214.0
+offset_right = 467.0
+offset_bottom = 244.0
+theme = ExtResource("23_pm3ni")
+button_pressed = true
+
+[node name="CheckSound" type="CheckButton" parent="ControlMainScreen"]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 238.0
+offset_right = 467.0
+offset_bottom = 268.0
+theme = ExtResource("23_pm3ni")
+button_pressed = true
+
+[node name="ControlNumbers" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DepthNumber" type="Label" parent="ControlNumbers"]
+z_index = 2
+layout_mode = 0
+offset_left = 21.0
+offset_top = 232.0
+offset_right = 93.0
+offset_bottom = 237.0
+theme = SubResource("Theme_2wyq8")
+text = "000000000000"
+
+[node name="MaxDepthNumber" type="Label" parent="ControlNumbers"]
+z_index = 2
+layout_mode = 0
+offset_left = 21.0
+offset_top = 248.0
+offset_right = 93.0
+offset_bottom = 253.0
+theme = SubResource("Theme_2wyq8")
+text = "000000000000"
+
+[node name="IceNumber" type="Label" parent="ControlNumbers"]
+z_index = 2
+layout_mode = 0
+offset_left = 184.0
+offset_top = 231.0
+offset_right = 248.0
+offset_bottom = 236.0
+theme = SubResource("Theme_vxglm")
+text = "0000000000000000"
+
+[node name="CoalNumber" type="Label" parent="ControlNumbers"]
+z_index = 2
+layout_mode = 0
+offset_left = 273.0
+offset_top = 231.0
+offset_right = 337.0
+offset_bottom = 236.0
+theme = SubResource("Theme_vxglm")
+text = "0000000000000000"
+
+[node name="IronNumber" type="Label" parent="ControlNumbers"]
+z_index = 2
+layout_mode = 0
+offset_left = 184.0
+offset_top = 245.0
+offset_right = 248.0
+offset_bottom = 250.0
+theme = SubResource("Theme_vxglm")
+text = "0000000000000000"
+
+[node name="GoldNumber" type="Label" parent="ControlNumbers"]
+z_index = 2
+layout_mode = 0
+offset_left = 273.0
+offset_top = 245.0
+offset_right = 337.0
+offset_bottom = 250.0
+theme = SubResource("Theme_vxglm")
+text = "0000000000000000"
+
+[node name="BuildingGUI" type="Node2D" parent="."]
+visible = false
+
+[node name="MenuBackground" type="Sprite2D" parent="BuildingGUI"]
+position = Vector2(160, 16)
+texture = ExtResource("25_og1vs")
+centered = false
+
+[node name="MainBuilding" type="Node2D" parent="BuildingGUI"]
+visible = false
+
+[node name="MainBuildingFrame" type="Sprite2D" parent="BuildingGUI/MainBuilding"]
+position = Vector2(164, 19)
+texture = ExtResource("26_2f3dj")
+centered = false
+
+[node name="ButtonBuyBarracks" type="Button" parent="BuildingGUI/MainBuilding"]
+offset_left = 285.0
+offset_top = 53.0
+offset_right = 311.0
+offset_bottom = 79.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyElevator" type="Button" parent="BuildingGUI/MainBuilding"]
+offset_left = 285.0
+offset_top = 116.0
+offset_right = 311.0
+offset_bottom = 142.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyGeo" type="Button" parent="BuildingGUI/MainBuilding"]
+offset_left = 285.0
+offset_top = 179.0
+offset_right = 311.0
+offset_bottom = 205.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyCHP" type="Button" parent="BuildingGUI/MainBuilding"]
+offset_left = 434.0
+offset_top = 53.0
+offset_right = 460.0
+offset_bottom = 79.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyLab" type="Button" parent="BuildingGUI/MainBuilding"]
+offset_left = 434.0
+offset_top = 116.0
+offset_right = 460.0
+offset_bottom = 142.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBackMB" type="Button" parent="BuildingGUI/MainBuilding"]
+offset_left = 433.0
+offset_top = 184.0
+offset_right = 461.0
+offset_bottom = 205.0
+theme = ExtResource("28_fv21b")
+
+[node name="Barracks" type="Node2D" parent="BuildingGUI"]
+visible = false
+position = Vector2(0, 1)
+
+[node name="BarracksFrame" type="Sprite2D" parent="BuildingGUI/Barracks"]
+position = Vector2(164, 18)
+texture = ExtResource("29_yq6so")
+centered = false
+
+[node name="ButtonBuyWorker" type="Button" parent="BuildingGUI/Barracks"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 52.0
+offset_right = 311.0
+offset_bottom = 78.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyMecha" type="Button" parent="BuildingGUI/Barracks"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 115.0
+offset_right = 311.0
+offset_bottom = 141.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyIceDrill" type="Button" parent="BuildingGUI/Barracks"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 178.0
+offset_right = 311.0
+offset_bottom = 204.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBackBarracks" type="Button" parent="BuildingGUI/Barracks"]
+custom_minimum_size = Vector2(28, 21)
+offset_left = 432.0
+offset_top = 182.0
+offset_right = 460.0
+offset_bottom = 203.0
+theme = ExtResource("28_fv21b")
+
+[node name="WorkerAmount" type="Label" parent="BuildingGUI/Barracks"]
+offset_left = 323.0
+offset_top = 32.0
+offset_right = 449.0
+offset_bottom = 37.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="MechaAmount" type="Label" parent="BuildingGUI/Barracks"]
+offset_left = 323.0
+offset_top = 50.0
+offset_right = 449.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="IceDrillAmount" type="Label" parent="BuildingGUI/Barracks"]
+offset_left = 323.0
+offset_top = 68.0
+offset_right = 449.0
+offset_bottom = 73.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="Geo" type="Node2D" parent="BuildingGUI"]
+visible = false
+
+[node name="FrameGeo" type="Sprite2D" parent="BuildingGUI/Geo"]
+position = Vector2(164, 19)
+texture = ExtResource("30_fv21b")
+centered = false
+
+[node name="ButtonBuyDigger" type="Button" parent="BuildingGUI/Geo"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 53.0
+offset_right = 311.0
+offset_bottom = 79.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyExc" type="Button" parent="BuildingGUI/Geo"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 116.0
+offset_right = 311.0
+offset_bottom = 142.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBuyTNT" type="Button" parent="BuildingGUI/Geo"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 179.0
+offset_right = 311.0
+offset_bottom = 205.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBackGeo" type="Button" parent="BuildingGUI/Geo"]
+custom_minimum_size = Vector2(28, 21)
+offset_left = 432.0
+offset_top = 183.0
+offset_right = 460.0
+offset_bottom = 204.0
+theme = ExtResource("28_fv21b")
+
+[node name="DiggerAmount" type="Label" parent="BuildingGUI/Geo"]
+offset_left = 323.0
+offset_top = 33.0
+offset_right = 453.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="ExcAmount" type="Label" parent="BuildingGUI/Geo"]
+offset_left = 323.0
+offset_top = 51.0
+offset_right = 453.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="TNTAmount" type="Label" parent="BuildingGUI/Geo"]
+offset_left = 323.0
+offset_top = 69.0
+offset_right = 453.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="CHP" type="Node2D" parent="BuildingGUI"]
+visible = false
+
+[node name="FrameCHP" type="Sprite2D" parent="BuildingGUI/CHP"]
+position = Vector2(164, 19)
+texture = ExtResource("31_tel4y")
+centered = false
+
+[node name="UpgradeWorkerButton" type="Button" parent="BuildingGUI/CHP"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 53.0
+offset_right = 311.0
+offset_bottom = 79.0
+theme = ExtResource("27_yq6so")
+
+[node name="UpgradeMechaButton" type="Button" parent="BuildingGUI/CHP"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 116.0
+offset_right = 311.0
+offset_bottom = 142.0
+theme = ExtResource("27_yq6so")
+
+[node name="UpgradeIceDrillButton" type="Button" parent="BuildingGUI/CHP"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 179.0
+offset_right = 311.0
+offset_bottom = 205.0
+theme = ExtResource("27_yq6so")
+
+[node name="CHPBackButton" type="Button" parent="BuildingGUI/CHP"]
+custom_minimum_size = Vector2(28, 21)
+offset_left = 432.0
+offset_top = 183.0
+offset_right = 460.0
+offset_bottom = 204.0
+theme = ExtResource("28_fv21b")
+
+[node name="WorkerLevel" type="Label" parent="BuildingGUI/CHP"]
+offset_left = 323.0
+offset_top = 33.0
+offset_right = 453.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="MechaLevel" type="Label" parent="BuildingGUI/CHP"]
+offset_left = 323.0
+offset_top = 51.0
+offset_right = 453.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="IceDrillLevel" type="Label" parent="BuildingGUI/CHP"]
+offset_left = 323.0
+offset_top = 69.0
+offset_right = 453.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="Lab" type="Node2D" parent="BuildingGUI"]
+visible = false
+
+[node name="FrameLab" type="Sprite2D" parent="BuildingGUI/Lab"]
+position = Vector2(164, 19)
+texture = ExtResource("32_qkpxi")
+centered = false
+
+[node name="UpgradeDiggerButton" type="Button" parent="BuildingGUI/Lab"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 53.0
+offset_right = 311.0
+offset_bottom = 79.0
+theme = ExtResource("27_yq6so")
+
+[node name="UpgradeExcButton" type="Button" parent="BuildingGUI/Lab"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 116.0
+offset_right = 311.0
+offset_bottom = 142.0
+theme = ExtResource("27_yq6so")
+
+[node name="UpgradeTNTButton" type="Button" parent="BuildingGUI/Lab"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 285.0
+offset_top = 179.0
+offset_right = 311.0
+offset_bottom = 205.0
+theme = ExtResource("27_yq6so")
+
+[node name="ButtonBackLab" type="Button" parent="BuildingGUI/Lab"]
+custom_minimum_size = Vector2(28, 21)
+offset_left = 432.0
+offset_top = 183.0
+offset_right = 460.0
+offset_bottom = 204.0
+theme = ExtResource("28_fv21b")
+
+[node name="DiggerLevelAmount" type="Label" parent="BuildingGUI/Lab"]
+offset_left = 323.0
+offset_top = 33.0
+offset_right = 453.0
+offset_bottom = 38.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="ExcLevelAmount" type="Label" parent="BuildingGUI/Lab"]
+offset_left = 323.0
+offset_top = 51.0
+offset_right = 453.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="TNTLevelAmount" type="Label" parent="BuildingGUI/Lab"]
+offset_left = 323.0
+offset_top = 69.0
+offset_right = 453.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[node name="Elevator" type="Node2D" parent="BuildingGUI"]
+visible = false
+
+[node name="FrameElevator" type="Sprite2D" parent="BuildingGUI/Elevator"]
+position = Vector2(228, 25)
+texture = ExtResource("33_5q0nq")
+centered = false
+
+[node name="UpgradeElevator" type="Button" parent="BuildingGUI/Elevator"]
+custom_minimum_size = Vector2(26, 26)
+offset_left = 377.0
+offset_top = 60.0
+offset_right = 403.0
+offset_bottom = 86.0
+theme = ExtResource("27_yq6so")
+
+[node name="BackElevatorButton" type="Button" parent="BuildingGUI/Elevator"]
+custom_minimum_size = Vector2(28, 21)
+offset_left = 432.0
+offset_top = 183.0
+offset_right = 460.0
+offset_bottom = 204.0
+theme = ExtResource("28_fv21b")
+
+[node name="CurrMaxDepth" type="Label" parent="BuildingGUI/Elevator"]
+offset_left = 238.0
+offset_top = 39.0
+offset_right = 368.0
+offset_bottom = 44.0
+theme_override_fonts/font = ExtResource("23_y6deb")
+theme_override_font_sizes/font_size = 5
+text = "0"
+
+[connection signal="pressed" from="MainScreen/ElevatorButton" to="." method="_on_elevator_button_pressed"]
+[connection signal="pressed" from="MainScreen/GeoCenterButton" to="." method="_on_geo_center_button_pressed"]
+[connection signal="pressed" from="MainScreen/MainBuildingButton" to="." method="_on_main_building_button_pressed"]
+[connection signal="pressed" from="MainScreen/BarracksButton" to="." method="_on_barracks_button_pressed"]
+[connection signal="pressed" from="MainScreen/CHPButton" to="." method="_on_chp_button_pressed"]
+[connection signal="pressed" from="MainScreen/RIButton" to="." method="_on_ri_button_pressed"]
+[connection signal="pressed" from="ControlMainScreen/ButtonDown" to="." method="_on_button_down_pressed"]
+[connection signal="pressed" from="ControlMainScreen/ButtonUp" to="." method="_on_button_up_pressed"]
+[connection signal="toggled" from="ControlMainScreen/CheckMusic" to="." method="_on_check_music_toggled"]
+[connection signal="toggled" from="ControlMainScreen/CheckSound" to="." method="_on_check_sound_toggled"]
+[connection signal="pressed" from="BuildingGUI/MainBuilding/ButtonBuyBarracks" to="." method="_on_button_buy_barracks_pressed"]
+[connection signal="pressed" from="BuildingGUI/MainBuilding/ButtonBuyElevator" to="." method="_on_button_buy_elevator_pressed"]
+[connection signal="pressed" from="BuildingGUI/MainBuilding/ButtonBuyGeo" to="." method="_on_button_buy_geo_pressed"]
+[connection signal="pressed" from="BuildingGUI/MainBuilding/ButtonBuyCHP" to="." method="_on_button_buy_chp_pressed"]
+[connection signal="pressed" from="BuildingGUI/MainBuilding/ButtonBuyLab" to="." method="_on_button_buy_lab_pressed"]
+[connection signal="pressed" from="BuildingGUI/MainBuilding/ButtonBackMB" to="." method="_on_button_back_mb_pressed"]
+[connection signal="pressed" from="BuildingGUI/Barracks/ButtonBuyWorker" to="." method="_on_button_buy_worker_pressed"]
+[connection signal="pressed" from="BuildingGUI/Barracks/ButtonBuyMecha" to="." method="_on_button_buy_mecha_pressed"]
+[connection signal="pressed" from="BuildingGUI/Barracks/ButtonBuyIceDrill" to="." method="_on_button_buy_ice_drill_pressed"]
+[connection signal="pressed" from="BuildingGUI/Barracks/ButtonBackBarracks" to="." method="_on_button_back_barracks_pressed"]
+[connection signal="pressed" from="BuildingGUI/Geo/ButtonBuyDigger" to="." method="_on_button_buy_digger_pressed"]
+[connection signal="pressed" from="BuildingGUI/Geo/ButtonBuyExc" to="." method="_on_button_buy_exc_pressed"]
+[connection signal="pressed" from="BuildingGUI/Geo/ButtonBuyTNT" to="." method="_on_button_buy_tnt_pressed"]
+[connection signal="pressed" from="BuildingGUI/Geo/ButtonBackGeo" to="." method="_on_button_back_geo_pressed"]
+[connection signal="pressed" from="BuildingGUI/CHP/UpgradeWorkerButton" to="." method="_on_upgrade_worker_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/CHP/UpgradeMechaButton" to="." method="_on_upgrade_mecha_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/CHP/UpgradeIceDrillButton" to="." method="_on_upgrade_ice_drill_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/CHP/CHPBackButton" to="." method="_on_chp_back_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/Lab/UpgradeDiggerButton" to="." method="_on_upgrade_digger_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/Lab/UpgradeExcButton" to="." method="_on_upgrade_exc_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/Lab/UpgradeTNTButton" to="." method="_on_upgrade_tnt_button_pressed"]
+[connection signal="pressed" from="BuildingGUI/Lab/ButtonBackLab" to="." method="_on_button_back_lab_pressed"]
+[connection signal="pressed" from="BuildingGUI/Elevator/UpgradeElevator" to="." method="_on_upgrade_elevator_pressed"]
+[connection signal="pressed" from="BuildingGUI/Elevator/BackElevatorButton" to="." method="_on_back_elevator_button_pressed"]

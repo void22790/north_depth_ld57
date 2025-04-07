@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://7hrgywmgfecj"]
+
+[ext_resource type="Script" uid="uid://d01fi84ukdlaj" path="res://scripts/tnt.gd" id="1_jrdv8"]
+
+[node name="TNT" type="Node"]
+script = ExtResource("1_jrdv8")
+
+[node name="Timer" type="Timer" parent="."]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://dij61m3kjwktk"]
+
+[ext_resource type="Script" uid="uid://p33m6hdcq121" path="res://scripts/break_particles.gd" id="1_g2cl2"]
+
+[node name="BreakParticles" type="Node2D"]
+script = ExtResource("1_g2cl2")
+
+[node name="Particles1" type="CPUParticles2D" parent="."]
+amount = 7
+speed_scale = 0.7
+explosiveness = 1.0
+randomness = 1.0
+spread = 180.0
+initial_velocity_min = 60.0
+initial_velocity_max = 100.0
+scale_amount_max = 2.0
+color = Color(0.305882, 0.333333, 0.439216, 1)
+
+[node name="Particles2" type="CPUParticles2D" parent="."]
+amount = 7
+speed_scale = 0.7
+explosiveness = 1.0
+randomness = 1.0
+spread = 180.0
+initial_velocity_min = 60.0
+initial_velocity_max = 100.0
+scale_amount_max = 2.0
+color = Color(0.239216, 0.211765, 0.309804, 1)
+
+[connection signal="finished" from="Particles1" to="." method="_on_particles_1_finished"]
+[connection signal="finished" from="Particles2" to="." method="_on_particles_2_finished"]
